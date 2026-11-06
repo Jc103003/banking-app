@@ -9,24 +9,46 @@ export default function SignInPage() {
         </div>
         <div className="login__form-container">
           <form className="login__form">
-            <input
-              required
-              type="email"
-              className="login__input"
-              id="email"
-              name="email"
-              placeholder="Email"
-            />
-            <input
-              required
-              type="password"
-              className="login__input"
-              id="password"
-              name="password"
-              placeholder="Password"
-            />
+            <div className="login__field">
+              <label className="login__label" htmlFor="email">
+                Email address
+              </label>
+              <input
+                required
+                type="email"
+                className="login__input"
+                id="email"
+                name="email"
+                placeholder="Example@gmail.com"
+              />
+            </div>
+            <div className="login__field">
+              <label className="login__label" htmlFor="password">
+                Password
+              </label>
+              <input
+                required
+                type="password"
+                className="login__input"
+                id="password"
+                name="password"
+                placeholder="***************"
+              />
+            </div>
+            <div className="login__help">
+              <label className="login__remember" htmlFor="remember_me">
+                <input
+                  type="checkbox"
+                  id="remember_me"
+                  name="remember_me"
+                  value="yes"
+                />
+                <span>Remember me</span>
+              </label>
+              <a href="/forgot-password">Forgot password?</a>
+            </div>
             <button className="login__submit" type="button">
-              Submit
+              Sign in
             </button>
           </form>
         </div>
